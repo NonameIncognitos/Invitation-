@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приглашение на День Рождения</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 300px;
+            text-align: center;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input, select, button {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Приглашение на День Рождения</h1>
+        <p>Буду рад(а) видеть вас на моем празднике по случаю Дня Рождения!</p>
+        <p><strong>Дата:</strong> 25 июня 2024 года</p>
+        <p><strong>Время:</strong> 18:00</p>
+        <p><strong>Место:</strong> ул. Примерная, д. 12, кв. 34</p>
+        <form id="invitationForm">
+            <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+            <select id="attendance" name="attendance" required>
+                <option value="">Придёте ли вы?</option>
+                <option value="yes">Да</option>
+                <option value="no">Нет</option>
+            </select>
+            <select id="money" name="money" required>
+                <option value="">Сколько денег с собой возьмёте?</option>
+                <option value="500">500с</option>
+                <option value="1000">1000с</option>
+            </select>
+            <button type="submit">Отправить</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('invitationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Спасибо за ваш ответ!');
+        });
+    </script>
+</body>
+</html>
